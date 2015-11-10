@@ -29,7 +29,10 @@ public:
 
     void execute(const QString& sql) ;//throw(DataException)
     int getData(const QString& sql, QSqlQueryModel *resultSet) ;//throw(DataException)
-//    void log(ARN::Exception& e) ;//throw(DataException)
+
+    QString showStr(QString myStr);
+    QString myString(QString myStr);
+
     void log(int msgType, QString msg, int errCode=0);// throw (DataException)
 
 signals:

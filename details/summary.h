@@ -7,7 +7,6 @@
 #include "datamanager.h"
 #include "adddata.h"
 #include "viewdata.h"
-#include "simplecrypt.h"
 
 namespace Ui {
 class Summary;
@@ -21,6 +20,7 @@ public:
     explicit Summary(QWidget *parent = 0);
     ~Summary();
     
+
 private slots:
     void on_pbLogin_clicked();
 
@@ -30,8 +30,6 @@ private slots:
 
 private:
     Ui::Summary *ui;
-    QString encryptStr(QString myStr);
-    QString decryptStr(QString myStr);
 
 };
 

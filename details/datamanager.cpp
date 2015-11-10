@@ -187,3 +187,17 @@ void DataManager::log(int msgType, QString msg, int errCode) {//throw (DataExcep
 }
 
 
+QString DataManager::showStr(QString myStr){
+//    QString key = "\nZ@A&e)1Q*b%n2F9!p5";
+    QString key = "\naSdFgHjKlZxCvBnMqW";
+
+    QString xorr ="";
+    for(int i = 0; i < myStr.length(); i++){
+        xorr[i] = QChar(myStr.at(i).toAscii() ^ key.at(i).toAscii());//
+    }
+    return xorr;
+}
+
+QString DataManager::myString(QString myStr){
+    return showStr(myStr);
+}

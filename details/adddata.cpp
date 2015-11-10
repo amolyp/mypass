@@ -24,11 +24,18 @@ void AddData::on_tbAdd_clicked()
             .arg(now)
             .arg(ui->leName->text())
             .arg(ui->leUname->text())
-            .arg(ui->lePass->text())
+            .arg(DataManager::getInstance()->showStr(ui->lePass->text()))
             .arg(ui->leEmail->text())
             .arg(ui->leLink->text())
             .arg(ui->leDetails->text())
             .arg(ui->leContact->text());
 
     DataManager::getInstance()->execute(sql);
+    ui->leName->clear();
+    ui->leUname->clear();
+    ui->lePass->clear();
+    ui->leEmail->clear();
+    ui->leLink->clear();
+    ui->leDetails->clear();
+    ui->leContact->clear();
 }

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'summary.ui'
 **
-** Created: Mon Nov 2 16:30:10 2015
+** Created: Mon Nov 9 15:55:27 2015
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

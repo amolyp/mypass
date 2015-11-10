@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'summary.h'
 **
-** Created: Thu Nov 5 16:27:38 2015
+** Created: Mon Nov 9 17:48:23 2015
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

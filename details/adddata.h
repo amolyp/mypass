@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QDateTime>
 #include "datamanager.h"
+
 namespace Ui {
 class AddData;
 }

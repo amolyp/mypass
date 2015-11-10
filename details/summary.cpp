@@ -1,6 +1,5 @@
 #include "summary.h"
 #include "ui_summary.h"
-SimpleCrypt crypto(Q_UINT64_C(0)); //some random number
 Summary::Summary(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Summary)
@@ -13,11 +12,6 @@ Summary::Summary(QWidget *parent) :
     DataManager::createInstance("myp.db");
     ui->pbAddData->hide();
     ui->pbViewData->hide();
-    qDebug() << encryptStr("anushwa1");
-    qDebug() << decryptStr(encryptStr("anushwa1"));
-
-
-
 }
 
 Summary::~Summary()
@@ -27,7 +21,7 @@ Summary::~Summary()
 
 void Summary::on_pbLogin_clicked()
 {
-    if (encryptStr(ui->lePassword->text())=="AwJzhYpHjSx1EUXUXA=="){
+    if (DataManager::getInstance()->showStr(ui->lePassword->text())=="k&.)["){
         ui->pbAddData->show();
         ui->pbViewData->show();
     }
@@ -38,20 +32,6 @@ void Summary::on_pbLogin_clicked()
     ui->lePassword->clear();
 }
 
-QString Summary::encryptStr(QString myStr){
-    //Encryption
-    QString result = crypto.encryptToString(myStr);
-
-    return result;
-}
-
-QString Summary::decryptStr(QString myStr){
-//    SimpleCrypt crypto(Q_UINT64_C(0x0c2ad4a4acb9f023)); //some random number
-    //Decryption
-    QString decrypted = crypto.decryptToString(myStr);
-
-    return decrypted;
-}
 
 void Summary::on_pbAddData_clicked()
 {
